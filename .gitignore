@@ -1,0 +1,11 @@
+.env
+node_modules/
+database/*.db
+.env.*
+!.env.example
+
+*.db
+*.db-shm
+*.db-wal
+
+npm-debug.log*
