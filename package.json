@@ -1,0 +1,25 @@
+{
+  "name": "zero-trust",
+  "version": "1.0.0",
+  "description": "Sistem Nilai dan Transkrip dengan Zero Trust Security (API Gateway sebagai PEP)",
+  "type": "module",
+  "scripts": {
+    "setup": "node scripts/setup-env.js",
+    "init-db": "node database/db.js",
+    "seed": "node database/seed.js && node database/seed-academic.js",
+    "reset-demo": "node database/seed-academic.js --reset",
+    "gateway": "node gateway/index.js",
+    "nilai": "node nilai/index.js",
+    "transkrip": "node transkrip/index.js",
+    "start:all": "bash scripts/start-all.sh",
+    "test:e2e": "node scripts/e2e-test.js"
+  },
+  "keywords": ["zero-trust", "api-gateway", "jwt", "keamanan-informasi"],
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
